@@ -13,9 +13,7 @@
 
 Android 2.0+ support
 
-## Usage
-
-### Acceptable URIs examples
+### 使用方法
 ``` java
  RateChart rateChart = (RateChart) findViewById(R.id.rateChart);
  rateChat.update();
