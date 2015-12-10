@@ -5,11 +5,16 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.sxzheng.ratechart.RateChart;
+import com.sxzheng.ratechart.RateChartTest;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RateChart mRateChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        mRateChart = (RateChart) findViewById(R.id.rateChart);
+        mRateChart.setTitle("七日年华收益率");
+        mRateChart.update(RateChartTest.generateDataArray(7, 0.1));
     }
 
     @Override

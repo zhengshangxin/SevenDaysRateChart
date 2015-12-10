@@ -25,7 +25,7 @@ class LinePlot extends Plot {
     public LinePlot(Context context, RateChartManager manager) {
         super(context, manager);
         mShaderPaint.setStyle(Style.FILL);
-        mShaderPaint.setColor(context.getResources().getColor(android.R.color.holo_orange_light));
+        mShaderPaint.setColor(context.getResources().getColor(R.color.orange_translucent));
         mShaderPath = new Path();
         mLinePath = new Path();
         mFontSize = context.getResources().getDisplayMetrics().scaledDensity;
